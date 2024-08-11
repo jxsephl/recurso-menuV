@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+#menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%; /* Reducción del ancho */
+    height: 50%; /* Reducción de la altura */
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 15px; /* Reducción del padding */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.tab {
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-around;
+    background-color: #000;
+}
+
+.tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 12px; /* Reducción del padding */
+    transition: 0.3s;
+    color: white;
+    font-size: 0.9em; /* Reducción del tamaño de la fuente */
+}
+
+.tab button:hover {
+    background-color: #333;
+}
+
+.tab button.active {
+    background-color: #1DB954; /* Spotify green */
+}
+
+.tabcontent-container {
+    padding: 5px 10px; /* Reducción del padding */
+    height: calc(100% - 40px); /* Ajuste de altura */
+    overflow-y: auto;
+}
+
+.tabcontent {
+    display: none;
+}
+
+.tabcontent h3 {
+    color: #1DB954; /* Spotify green */
+}
+
+#playerName {
+    font-size: 1.2em; /* Reducción del tamaño de la fuente */
+}
+
+.carousel-inner {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 0 165px; /* Ajusta el padding para centrar las imágenes */
+}
+
+.carousel-inner img {
+    width: 330px;
+    height: 330px;
+    margin-right: 10px;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.tabcontent-container::-webkit-scrollbar,
+.carousel-inner::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.tabcontent-container::-webkit-scrollbar-thumb,
+.carousel-inner::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3); /* Hacer los deslizadores más oscuros y transparentes */
+    border-radius: 4px;
+}
+
+.tabcontent-container::-webkit-scrollbar-thumb:hover,
+.carousel-inner::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Más visible al pasar el mouse */
+}
+
+.tabcontent-container::-webkit-scrollbar-track,
+.carousel-inner::-webkit-scrollbar-track {
+    background-color: transparent; /* Hacer la pista del deslizador transparente */
+}
+.online-players {
+    margin: 8px 0;
+    font-size: 0.9em; /* Reducción del tamaño de la fuente */
+}
+.banner {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%; /* Asegura que el banner ocupe todo el ancho del carrusel */
+    display: flex;
+    justify-content: center;
+}
+
+.banner-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
